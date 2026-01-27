@@ -1,10 +1,99 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Medical AI Voice Agent 🩺🎙️
 
-## Getting Started
+This is a Next.js web application built with App Router and bootstrapped using create-next-app.
 
-First, run the development server:
+The project focuses on delivering an AI-powered medical voice assistant experience, allowing users to interact with AI doctor agents, manage medical sessions, and access personalized dashboards with secure authentication and billing.
 
-```bash
+## 🚀 Features
+
+### 🤖 AI Medical Voice Agent
+
+- **Voice-based interaction with AI-powered medical assistants
+- **Session-based medical conversations
+
+### 👨‍⚕️ AI Doctor Agent Dashboard
+
+- **Browse and interact with multiple AI specialist doctors
+- **Session history and medical reports
+
+### 🔐 Authentication & Billing
+
+- **Secure authentication using Clerk
+- **Subscription & billing support (Stripe via Clerk Billing)
+
+### 📊 User Dashboard
+
+- **Medical session history
+- **Billing management
+
+### ⚡ Modern Tech Stack
+
+- **Next.js 16 (App Router)
+- **Tailwind CSS
+- **API Routes
+- **Optimized fonts with next/font (Geist)
+
+### 🖥️ Frontend
+
+- **Framework: Next.js
+- **UI: React Server & Client Components
+- **Styling: Tailwind CSS
+- **State: React hooks & server actions
+- **Fully Responsiveness
+
+### 🔐 Authentication & Authorization
+
+- **Provider: Clerk
+- **JWT-based authentication
+- **Route protection via middleware
+
+### ⚙️ Backend / API 
+
+- **Built-in Next.js Route Handlers
+- **Serverless APIs
+- **Secure access using Clerk sessions
+
+### 🗄️ Database
+
+- **Database: PostgreSQL (Neon) (Drizzle)
+
+### 🤖 AI Architecture
+
+### Text AI :
+
+- **Provider: OpenRouter & Assembly AI
+- **LLM-based medical conversation
+- **Context-aware 
+
+### Voice AI :
+
+- **Provider: Vapi AI & Assembly AI
+- **Real-time voice input/output
+- **Voice assistant session lifecycle
+
+### 💳 Billing (Developer Mode)
+
+- **Clerk Billing
+- **Developer Mode
+- **Subscription-based access
+- **Production-ready billing flow
+
+## 🏗️ System Architecture
+
+The Medical AI Voice Agent follows a modern full-stack, modular architecture built on Next.js App Router, combining frontend, backend APIs, authentication, billing, and AI services in a single scalable application.
+
+## 🛠️ Getting Started 
+
+First, install dependencies:
+
+npm install
+
+Key's example structure include in .env.example 
+
+You want to create .env file first and input your own created key's
+
+Run the development server:
+
 npm run dev
 # or
 yarn dev
@@ -12,25 +101,78 @@ yarn dev
 pnpm dev
 # or
 bun dev
-```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open http://localhost:3000 in your browser to see the application.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+You can start editing the main page by modifying:
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+app/page.tsx
 
-## Learn More
+The app supports hot reload, so changes appear instantly.
 
-To learn more about Next.js, take a look at the following resources:
+## 🧱 Project Structure (Overview)
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- **app/ – App Router pages and layouts
+- **app/api/ – Backend API routes
+- **components/ – Reusable UI components
+- **shared/ – Shared constants and lists
+- **lib/ – Utility functions and integrations
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## 📚 Learn More 
 
-## Deploy on Vercel
+To learn more about the technologies used, check out:
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+- **Next.js Documentation
+- **Next.js App Router
+- **Clerk Authentication
+- **Vercel Platform
+- **Vapi AI
+- **Open Router
+- **Assembly AI
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## 🌐 Deployment
+
+The easiest way to deploy this Next.js application is using Vercel, the creators of Next.js.
+
+1. Push the project to GitHub
+
+2. Import the repository into Vercel
+
+3. Configure environment variables
+
+### Deploy 🚀 
+
+- **For more details, see:
+
+* Next.js Deployment Documentation
+
+- **Deploy: Vercel
+- **CI/CD: GitHub → Vercel
+
+- **Environment separation: Development , Production
+
+## 🔐 Environment Variables
+
+Make sure to configure required environment variables for:
+
+- **Clerk Authentication
+
+- **Database (PostgreSQL / Neon / Drizzle)
+
+- **AI services
+
+- **Billing (Clerk - Developer Mode)
+
+* ⚠️ Never commit secret keys to your repository.
+
+* Key's example structure include .env.example
+
+* You want to create .env file first
+
+## 📄 License
+
+- **This project is for educational and development purposes
+
+* Built with ❤️ using Next.js and modern web technologies.
+
+* Built by ❤️ Rukshan Ekanayake
