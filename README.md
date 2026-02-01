@@ -4,6 +4,22 @@ This is a Next.js web application built with App Router and bootstrapped using c
 
 The project focuses on delivering an AI-powered medical voice assistant experience, allowing users to interact with AI doctor agents, manage medical sessions, and access personalized dashboards with secure authentication and billing.
 
+<br />
+<br />
+
+<img width="868" height="486" alt="Screenshot 2026-01-27 152547" src="https://github.com/user-attachments/assets/c92fd0aa-0dde-43f7-b748-bab4e7fcd98c" />
+
+<br />
+
+<img width="866" height="488" alt="Screenshot 2026-01-27 153633" src="https://github.com/user-attachments/assets/a19024fd-c074-41b4-bb1b-1a932775b0bc" />
+
+<br />
+
+<img width="868" height="488" alt="Screenshot 2026-01-27 153611" src="https://github.com/user-attachments/assets/d8472c10-aa54-4837-80e7-417e93f2130f" />
+
+<br />
+<br />
+
 ## 🚀 Features
 
 ### 🤖 AI Medical Voice Agent
