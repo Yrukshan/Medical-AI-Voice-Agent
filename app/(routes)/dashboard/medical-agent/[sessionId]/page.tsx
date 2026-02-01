@@ -13,7 +13,18 @@ export type SessionDetail = {
   id: number;
   notes: string;
   sessionId: string;
-  report: JSON | null;
+  report: { 
+    sessionId: string;
+    agent: string;
+    user: string;
+    timestamp: string;
+    chiefComplaint: string;
+    summary: string;
+    symptoms: string[];
+    duration: string;
+    severity: string;
+    medicationsMentioned: string[];
+    recommendations: string[];} | null;
   conversation: any[]; // array of messages
   selectedDoctor: doctorAgent;
   createdOn: string;

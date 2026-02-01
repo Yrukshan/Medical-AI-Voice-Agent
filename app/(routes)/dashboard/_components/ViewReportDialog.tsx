@@ -26,10 +26,10 @@ function ViewReportDialog({record} : Props) {
         <DialogContent>
             <DialogHeader>
             <DialogTitle asChild>
-                <h2 className='text-center text-4xl text-blue-500 underline underline-offset-8 decoration-2 inline-block'> 🩺 Medical AI Voice Agent Report : </h2>
+                <h2 className='text-center text-4xl text-blue-500 decoration-2 inline-block'> 🩺 Medical AI Voice Agent Report </h2>
             </DialogTitle>
             <DialogDescription asChild>
-                <div className='mt-5'>
+                <div className='max-h-[80vh] overflow-y-auto p-6 rounded-2xl scrollbar-thin scrollbar-thumb-blue-400 scrollbar-track-gray-100hover:scrollbar-thumb-blue-500transition-all'>
                     <h2 className='mb-5 font-bold text-blue-400 text-lg underline underline-offset-4 decoration-2 '>Session Information : </h2>
 
                     <div className="space-y-2 text-gray-700">
@@ -56,9 +56,18 @@ function ViewReportDialog({record} : Props) {
                         Session Date :
                         </span>{" "}
                         <span className="text-blue-600">
-                        {new Date(record.createdOn).toLocaleDateString()}
+                        {record.report?.timestamp}
                         </span>
                     </h2>
+
+                    {/* <h2 className="text-base">
+                        <span className="font-semibold text-gray-900">
+                        Session Date :
+                        </span>{" "}
+                        <span className="text-blue-600">
+                        {new Date(record.createdOn).toLocaleDateString()}
+                        </span>
+                    </h2> */}
 
                     <h2 className='mb-5 font-bold text-blue-400 text-lg underline underline-offset-4 decoration-2 '>Description : </h2>
                     <div className="space-y-2 text-gray-700">
@@ -70,20 +79,80 @@ function ViewReportDialog({record} : Props) {
                             {record.notes}
                             </span>
                         </h2>
-                    </div>
-                    </div>
 
+                        <h2 className="text-base">
+                            <span className="font-semibold text-gray-900">
+                            Main Medical Concern :
+                            </span>{" "}
+                            <span className="text-blue-600">
+                            {record.report?.chiefComplaint}
+                            </span>
+                        </h2>
+
+                        <h2 className="text-base">
+                            <span className="font-semibold text-gray-900">
+                            Symptoms :
+                            </span>{" "}
+                            <span className="text-blue-600">
+                            {record.report?.symptoms}
+                            </span>
+                        </h2>
+
+                    </div>
+                    </div>
+                        
+                    <br />    
                     <h2 className='mb-5 font-bold text-blue-400 text-lg underline underline-offset-4 decoration-2 '>Summery : </h2>
                     <div className="space-y-2 text-gray-700">
                         <h2 className="text-base">
                             <span className="font-semibold text-blue-900">
-                            The Medical AI Voice Agent generates comprehensive session reports for each patient interaction. Each report captures key details including the doctor's specialization, 
-                            appointment date, patient notes, AI-assisted recommendations, and conversation highlights. Our system provides a clear summary of all consultations, allowing patients and healthcare providers to quickly understand medical observations, 
-                            advice given, and follow-up recommendations in one easy-to-read format. All reports are securely recorded and organized, offering a complete overview of patient sessions at a glance.
-                            </span>{" "}
+                            {record.report?.summary}
+                            </span>
                             
                         </h2>
                     </div>
+                    
+                    <br /> 
+                    <h2 className='mb-5 font-bold text-blue-400 text-lg underline underline-offset-4 decoration-2 '>Recommendations : </h2>
+                    <div className="space-y-2 text-gray-700">
+                        <h2 className="text-base">
+                            <span className="font-semibold text-blue-900">
+                            {record.report?.recommendations}
+                            </span>
+                            
+                        </h2>
+                    </div>
+                    
+                    <br />
+                    <h2 className='mb-5 font-bold text-blue-400 text-lg underline underline-offset-4 decoration-2 '>Medications Mentioned : </h2>
+                    <div className="space-y-2 text-gray-700">
+                        <h2 className="text-base">
+                            <span className="font-semibold text-blue-900">
+                            {record.report?.medicationsMentioned}
+                            </span>
+                            
+                        </h2>
+                    </div>
+                    
+                    <br />
+                    <h2 className='mb-5 font-bold text-blue-400 text-lg underline underline-offset-4 decoration-2'>
+                    Overview of AI Medical Reporting :
+                    </h2>
+                    <div className="space-y-2 text-gray-700">
+                    <h2 className="text-base">
+                        <span className="font-semibold text-blue-900">
+                        The Medical AI Voice Agent creates a clear and easy-to-read report after every 
+                        conversation with you. The report includes important details such as the doctor’s 
+                        area of expertise, the date of your session, what you shared about your symptoms, 
+                        and helpful suggestions from the AI assistant.  
+                        Your conversation is summarized in simple language so you can easily understand 
+                        what was discussed and what to do next.  
+                        All your reports are stored safely and neatly, so you can look back at them anytime 
+                        and keep track of your health journey with confidence.
+                        </span>
+                    </h2>
+                    </div>
+
                 </div>
             </DialogDescription>
             </DialogHeader>
