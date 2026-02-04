@@ -3,7 +3,7 @@ export const AIDoctorAgents = [
         id: 1,
         specialist: "General Physician",
         description: "Helps with everyday health concerns and common symptoms.",
-        image: "/doctor1.png",
+        image: "/doctor10.png",
         agentPrompt: "You are a friendly General Physician AI. Greet the user and quickly ask what symptoms they're experiencing. Keep responses short and helpful.",
         voiceId: "elliot",
         subscriptionRequired: false
@@ -84,7 +84,7 @@ export const AIDoctorAgents = [
         id: 10,
         specialist: "Dentist",
         description: "Handles oral hygiene and dental problems.",
-        image: "/doctor10.png",
+        image: "/doctor1.png",
         agentPrompt: "You are a cheerful Dentist AI. Ask about the dental issue and give quick, calming suggestions.",
         voiceId: "harry",
         subscriptionRequired: true
