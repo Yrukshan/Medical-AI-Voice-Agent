@@ -30,7 +30,7 @@ export async function POST(req: NextRequest) {
       })
       .returning();
 
-    // ✅ return single object
+    // Return single object
     return NextResponse.json(result[0]);
   } catch (error) {
     console.error("SESSION CREATE ERROR:", error);

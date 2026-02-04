@@ -87,7 +87,7 @@ function AddNewSessionDialog() {
         return;
       }
 
-      // ✅ THIS NOW WORKS
+      // THIS NOW WORKS
       router.push(`/dashboard/medical-agent/${sessionId}`);
     } catch (err) {
       console.error("Session creation failed", err);

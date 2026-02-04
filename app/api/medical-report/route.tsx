@@ -80,7 +80,7 @@ export async function POST(req: NextRequest) {
       .update(SessionChatTable)
       .set({
         report,
-        conversation: JSON.stringify(messages), // <-- save conversation as JSON string
+        conversation: JSON.stringify(messages), // save conversation as JSON string
       })
       .where(eq(SessionChatTable.sessionId, sessionId));
 

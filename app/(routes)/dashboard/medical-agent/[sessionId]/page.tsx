@@ -142,7 +142,7 @@ function MedicalVoiceAgent() {
         <h2 className="font-bold text-xl text-gray-400">00:00</h2>
       </div>
 
-      {/* Doctor Info */}
+      {/* Doctor Infomation */}
       <div className="flex items-center flex-col mt-10">
         <Image
           src={sessionDetail.selectedDoctor.image}
