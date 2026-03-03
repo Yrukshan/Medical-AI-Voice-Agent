@@ -191,4 +191,4 @@ Make sure to configure required environment variables for:
 
 * Built with ❤️ using Next.js and modern web technologies.
 
-* Built by ❤️ Rukshan Ekanayake.
+* Built by ❤️ Rukshan Ekanayake....
