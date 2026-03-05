@@ -1,11 +1,11 @@
 import { db } from "@/config/db";
 import { SessionChatTable } from "@/config/schema";
 import { currentUser } from "@clerk/nextjs/server";
-import { NextRequest, NextResponse } from "next/server";
+import { NextResponse } from "next/server";
 import { v4 as uuidv4 } from "uuid";
 import { desc, eq } from "drizzle-orm";
 
-export async function POST(req: NextRequest) {
+export async function POST(req: Request) {
   try {
     const { notes, selectedDoctor } = await req.json();
     const user = await currentUser();
@@ -30,7 +30,6 @@ export async function POST(req: NextRequest) {
       })
       .returning();
 
-    // Return single object
     return NextResponse.json(result[0]);
   } catch (error) {
     console.error("SESSION CREATE ERROR:", error);
@@ -41,7 +40,7 @@ export async function POST(req: NextRequest) {
   }
 }
 
-export async function GET(req: NextRequest) {
+export async function GET(req: Request) {
   try {
     const { searchParams } = new URL(req.url);
     const sessionId = searchParams.get("sessionId");
@@ -57,26 +56,25 @@ export async function GET(req: NextRequest) {
     if (sessionId === "all") {
 
       const result = await db
-      .select()
-      .from(SessionChatTable)
-      // @ts-ignore
-      .where(eq(SessionChatTable.createdBy, user?.primaryEmailAddress?.emailAddress))
-      .orderBy(desc(SessionChatTable.id));
+        .select()
+        .from(SessionChatTable)
+        // @ts-ignore
+        .where(eq(SessionChatTable.createdBy, user?.primaryEmailAddress?.emailAddress))
+        .orderBy(desc(SessionChatTable.id));
 
       return NextResponse.json(result);
 
-    }
-    else {
+    } else {
 
       const result = await db
-      .select()
-      .from(SessionChatTable)
-      .where(eq(SessionChatTable.sessionId, sessionId));
+        .select()
+        .from(SessionChatTable)
+        .where(eq(SessionChatTable.sessionId, sessionId));
 
       return NextResponse.json(result[0]);
 
     }
-    
+
   } catch (error) {
     console.error("SESSION FETCH ERROR:", error);
     return NextResponse.json(
