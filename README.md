@@ -44,7 +44,7 @@ The project focuses on delivering an AI-powered medical voice assistant experien
 
 ### ⚡ Modern Tech Stack
 
-- **Next.js 16 (App Router)
+- **Next.js (App Router)
 - **Tailwind CSS
 - **API Routes
 - **Optimized fonts with next/font (Geist)
@@ -191,4 +191,4 @@ Make sure to configure required environment variables for:
 
 * Built with ❤️ using Next.js and modern web technologies.
 
-* Built by ❤️ Rukshan Ekanayake
+* Built by ❤️ Rukshan Ekanayake....
