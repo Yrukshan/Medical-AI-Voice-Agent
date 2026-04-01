@@ -7,7 +7,7 @@ export async function POST(req: NextRequest) {
 
     try{
         const completion = await openai.chat.completions.create({
-        model: "google/gemini-2.5-flash-preview-09-2025",
+        model: "gpt-4.1-mini",
         max_tokens: 600,
         messages: [
             {role:'system', content:JSON.stringify(AIDoctorAgents) },

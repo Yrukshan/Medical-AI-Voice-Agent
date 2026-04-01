@@ -46,7 +46,7 @@ export async function POST(req: NextRequest) {
 
     // 3️ Call AI model
     const completion = await openai.chat.completions.create({
-      model: "google/gemini-2.5-flash-preview-09-2025",
+      model: "gpt-4.1-mini",
       temperature: 0.2,
       max_tokens: 600,
       messages: [
